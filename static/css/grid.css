@@ -1,4 +1,4 @@
-.grid-item { width: 300px; }
+.grid-item { width: 500px; }
 
 @font-face {
   font-family: 'Calluna';
@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+/*  background: #2980b9;*/
   font-family: Calluna, Arial, sans-serif;
   min-height: 1000px;
 }
@@ -16,46 +16,67 @@ body {
   column-gap: 15px;
   width: 90%;
   max-width: 1100px;*/
-  margin: 50px auto;*/
+  margin: 0px auto;*/
+}
+.dashboard-piece {
+    min-height: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+.wrap {
+	width: 100%;
 }
 
-figure {
-  background: #fefefe;
-  border: 2px solid #fcfcfc;
-  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  margin: 0 2px 15px;
-  padding: 15px;
-  padding-bottom: 10px;
-  transition: opacity .4s ease-in-out;
-  display: inline-block;
-  column-break-inside: avoid;
+.pldiv { 
+	height: 500px;
+	background: #484848;
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
+.sabdiv {
+	height: 500px;
+	background: #B1B1B1;
 }
 
-figure figcaption {
-  font-size: .9rem;
-  color: #444;
-  line-height: 1.5;
+.lidiv {
+	height: 500px;
+    background: #6D9DD1;
+} 
+
+.sbdiv {
+	height: 500px;
+	background: #86A48B; 
 }
 
-small {
-  font-size: 1rem;
-  float: right;
-  text-transform: uppercase;
-  color: #aaa;
+.plexlogo {
+ max-height: 300px;
 }
 
-small a {
-  color: #666;
-  text-decoration: none;
-  transition: .4s color;
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
+.sabnzbd {
+/*max-height: 300px;*/
+}
 
+.milight {
+ background: #6D9DD1;
+}
+
+.sickbeard {
+ background: #86A48B;
+ max-height: 50%;
+}
+#columns img {
+    max-width: 95%;
+    max-height: 95%;
+	vertical-align: middle;
+	/*height: 100%;*/
+}
