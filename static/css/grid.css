@@ -6,7 +6,7 @@
 }
 
 body {
-/*  background: #2980b9;*/
+  background: #292929;
   font-family: Calluna, Arial, sans-serif;
   min-height: 1000px;
 }
@@ -26,7 +26,7 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
 }
 .wrap {
 	width: 100%;
