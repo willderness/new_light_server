@@ -19,7 +19,7 @@ body {
   margin: 0px auto;*/
 }
 .dashboard-piece {
-    min-height: 300px;
+/*    min-height: 300px;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -32,28 +32,28 @@ body {
 	width: 100%;
 }
 
+.imgbtn {
+    height: 200px;
+}
+
 .pldiv { 
-	height: 500px;
 	background: #484848;
 }
 
 .sabdiv {
-	height: 500px;
 	background: #B1B1B1;
 }
 
 .lidiv {
-	height: 500px;
     background: #6D9DD1;
 } 
 
 .sbdiv {
-	height: 500px;
 	background: #86A48B; 
 }
 
 .plexlogo {
- max-height: 300px;
+ max-height: 50%;
 }
 
 .helper {
@@ -64,17 +64,20 @@ body {
 
 .sabnzbd {
 /*max-height: 300px;*/
+ max-height: 80%;
 }
 
 .milight {
  background: #6D9DD1;
+ max-height: 80%;
 }
 
 .sickbeard {
  background: #86A48B;
- max-height: 50%;
+ max-height: 80%;
 }
-#columns img {
+
+.imgbut img {
     max-width: 95%;
     max-height: 95%;
 	vertical-align: middle;
@@ -106,5 +109,13 @@ body {
 .img-container img {
     vertical-align: middle;
     display: inline-block;
+    max-width: 100%;
+
+}
+
+@media (min-width: 48em) { 
+.imgbtn {
+    height: 500px;
+}
 }
 

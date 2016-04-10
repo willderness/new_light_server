@@ -1,20 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<!DOCTYPE html><html class=''>
-<head>
-<script src="{{url_for('static', filename='js/grid.js')}}"></script> 
-<meta charset='UTF-8'><meta name="robots" content="noindex">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css')}}" >
-<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}" >
-<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css')}}" >
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-</head><body>
+    <script src="{{url_for('static', filename='js/grid.js')}}"></script> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css')}}" >
+  </head>
+  <body>
 <div class="container">
 {% for item in items %}
 {% if loop.index is not divisibleby 2 %} 
 <div class="row">
 {% endif %}
-  <div class="one-half column dashboard-piece {{item['div']}}" data-id="{{item['class']}}">
+  <div class="col-sm-12 col-md-6 dashboard-piece imgbtn {{item['div']}}" data-id="{{item['class']}}">
       <div class="dummy"> </div>
       <div class="img-container">
       <img class="u-max-full-width {{item['class']}}" src="{{ url_for('static', filename=item['img'])}}">
