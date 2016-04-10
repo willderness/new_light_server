@@ -16,7 +16,7 @@
 {% if loop.index is not divisibleby 2 %} 
 <div class="row">
 {% endif %}
-  <div class="col-sm-12 col-md-6 dashboard-piece imgbtn {{item['div']}}" data-id="{{item['class']}}">
+<div class="col-sm-12 col-md-6 dashboard-piece imgbtn {{item['div']}}" data-id="{{item['class']}}" data-link="{{item['url']}}">
       <div class="dummy"> </div>
       <div class="img-container">
       <img class="u-max-full-width {{item['class']}}" src="{{ url_for('static', filename=item['img'])}}">
@@ -29,5 +29,10 @@
 </div>
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+$('.imgbtn').click(function(){
+    window.location.href = $(this).data('link');
+});
+</script>
 </body></html>
 
