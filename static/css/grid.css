@@ -105,7 +105,13 @@ body {
 
 @media (min-width: 48em) { 
 .imgbtn {
-    height: 500px;
+    height: 100%;
 }
+.row {
+    height: 50%;
+}
+html,body,.container-fluid {
+    height:100%;
+} 
 }
 

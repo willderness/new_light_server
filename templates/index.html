@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css')}}" >
   </head>
   <body>
-<div class="container">
+<div class="container-fluid">
 {% for item in items %}
 {% if loop.index is not divisibleby 2 %} 
 <div class="row">
@@ -29,37 +29,5 @@
 </div>
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<!--<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script> 
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-<script>
-$(document).ready(function(){
-	var $grid = $('.grid').masonry({
-		// options...
-		itemSelector: '.grid-item',
-		columnWidth: 500 
-	});
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry('layout');
-	});
-
-$('figure img').click(function() 
-{ 
-    var light_id = $(this).parent().data('id'),
-    result = "Light " + light_id + " active.";
-
-    $.ajax
-    ({ 
-        url: 'light',
-        data: "id="+light_id,
-        type: 'post',
-        success: function()
-        {
-			alert(result);            
-        }
-    });
-});
-});
-</script>-->
 </body></html>
 
