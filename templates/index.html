@@ -1,29 +1,33 @@
 
 <!DOCTYPE html><html class=''>
 <head>
-<script src="{{url_for('static', filename='js/grid.js')}}"></script>
+<script src="{{url_for('static', filename='js/grid.js')}}"></script> 
 <meta charset='UTF-8'><meta name="robots" content="noindex">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css')}}" >
+<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}" >
+<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css')}}" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head><body>
-<div id="columns" class="grid">
-  <div class="grid-item dashboard-piece sabdiv" data-id="{{item}}">
-      <span class="helper"></span> <img class="sabnzbd" src="{{ url_for('static', filename='assets/sabnzbd.png')}}">
+<div class="container">
+{% for item in items %}
+{% if loop.index is not divisibleby 2 %} 
+<div class="row">
+{% endif %}
+  <div class="one-half column dashboard-piece {{item['div']}}" data-id="{{item['class']}}">
+      <div class="dummy"> </div>
+      <div class="img-container">
+      <img class="u-max-full-width {{item['class']}}" src="{{ url_for('static', filename=item['img'])}}">
+      </div>
   </div>
-  <div class="grid-item dashboard-piece pldiv" data-id="{{item}}">
-      <span class="helper"></span> <img class="plexlogo" src="{{ url_for('static', filename='assets/plex.png')}}">
-  </div>
-  <div class="grid-item dashboard-piece sbdiv" data-id="{{item}}">
-      <span class="helper"></span> <img class="sickbeard" src="{{ url_for('static', filename='assets/sickbeard.png')}}">
-  </div>
-
- <div class="grid-item dashboard-piece lidiv" data-id="{{item}}">
-      <span class="helper"></span> <img class="milight" src="{{ url_for('static', filename='assets/light.png')}}">
-  </div>
-
-
+{% if loop.index is divisibleby 2 %} 
 </div>
+{% endif %}
+{% endfor %}
+</div>
+
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script> 
+<!--<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script> 
 <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -54,6 +58,6 @@ $('figure img').click(function()
     });
 });
 });
-</script>
+</script>-->
 </body></html>
 

@@ -3,7 +3,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def light_grid():
-    items = ["All", "Living Room", "Kitchen", "Living Room Lamp", "Front Room", "Office", "Hall", "Bedside Left", "Bedside Right", "Master"];
+    items = [
+            {'class':'sabnzbd', 'img':'assets/sabnzbd.png', 'div':'sabdiv'},
+            {'class':'plexlogo', 'img':'assets/plex.png', 'div':'pldiv'},
+            {'class':'sickbeard', 'img':'assets/sickbeard.png', 'div':'sbdiv'},
+            {'class':'milight', 'img':'assets/light.png', 'div':'lidiv'} 
+            ];
     return render_template('index.html', items=items)
 
 @app.route('/light', methods=['POST'])
